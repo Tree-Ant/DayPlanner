@@ -12,6 +12,7 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src=assets/moment.js></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -28,112 +29,10 @@
         <h3 id="Date"></h3>
       </div>
     </div>
-    <table class="table">
-      <tr>
-        <th>Time</th>
-        <th class="col-8">Event</th>
-        <th>Save</th>
-      </tr>
-      <tr>
-        <td id="timer">9AM</td>
-        <td>
-          <ul>
-            <li id="9">
-            </li>
-          </ul>
-        </td>
-        <td id="9AM"><i class="material-icons md-48">delete</i></td>
-      </tr>
-      <tr>
-        <td id="timer">10AM</td>
-        <td>
-          <ul>
-            <li id="10">
-            </li>
-          </ul>
-        </td>
-        <td><i class="material-icons md-48">delete</i></td>
-      </tr>
-      <tr>
-        <td id="timer">11AM</td>
-        <td>
-          <ul>
-            <li id="11">
-            </li>
-          </ul>
-        </td>
-        <td><i class="material-icons md-48">delete</i></td>
-      </tr>
-      <tr>
-        <td id="timer">12PM</td>
-        <td>
-          <ul>
-            <li id="12">
-            </li>
-          </ul>
-        </td>
-        <td><i class="material-icons md-48">delete</i></td>
-      </tr>
-      <tr>
-        <td id="timer">1PM</td>
-        <td>
-          <ul>
-            <li id="1">
-            </li>
-          </ul>
-        </td>
-        <td><i class="material-icons md-48">delete</i></td>
-      </tr>
-      <tr>
-        <td id="timer">2PM</td>
-        <td>
-          <ul>
-            <li id="2">
-            </li>
-          </ul>
-        </td>
-        <td><i class="material-icons md-48">delete</i></td>
-      </tr>
-      <tr>
-        <td id="timer">3PM</td>
-        <td>
-          <ul>
-            <li id="3">
-            </li>
-          </ul>
-        </td>
-        <td><i class="material-icons md-48">delete</i></td>
-      </tr>
-      <tr>
-        <td id="timer">4PM</td>
-        <td>
-          <ul>
-            <li id="4">
-            </li>
-          </ul>
-        </td>
-        <td><i class="material-icons md-48">delete</i></td>
-      </tr>
-      <tr>
-        <td id="timer">5PM</td>
-        <td>
-          <ul>
-            <li id="5">
-            </li>
-          </ul>
-        </td>
-        <td><a class="material-icons md-48">delete</a></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-    </table>
     <div class="row">
       <button class="addBTN">ADD EVENT</button>
     </div>
-  </div>
+  
   <div class="table2">
     <div class="container">
       <div class="row">
@@ -156,11 +55,115 @@
                 <option value="5PM">5PM</option>
               </select></td>
             <td><input type="text" placeholder="Go to Class" id="newEvent"></input></td>
-            <td type="button" id="save"></td>
+            <td id="save"><i id="12PM" class="material-icons md-48">send</i></td>
           </tr>
         </table>
       </div>
     </div>
+  </div>
+  <table class="table">
+    <tr>
+      <th>Time</th>
+      <th class="col-8">Event</th>
+      <th>Save</th>
+    </tr>
+    <tr>
+      <td id="timer">9AM</td>
+      <td>
+        <ul>
+          <li id="9">
+          </li>
+        </ul>
+      </td>
+      <td id="9AM"><i class="material-icons md-48">delete</i></td>
+    </tr>
+    <tr>
+      <td id="timer">10AM</td>
+      <td>
+        <ul>
+          <li id="10">
+          </li>
+        </ul>
+      </td>
+      <td><i id="10AM" class="material-icons md-48">delete</i></td>
+    </tr>
+    <tr>
+      <td id="timer">11AM</td>
+      <td>
+        <ul>
+          <li id="11">
+          </li>
+        </ul>
+      </td>
+      <td><i id="11AM" class="material-icons md-48">delete</i></td>
+    </tr>
+    <tr>
+      <td id="timer">12PM</td>
+      <td>
+        <ul>
+          <li id="12">
+          </li>
+        </ul>
+      </td>
+      <td><i id="12PM" class="material-icons md-48">delete</i></td>
+    </tr>
+    <tr>
+      <td id="timer">1PM</td>
+      <td>
+        <ul>
+          <li id="1">
+          </li>
+        </ul>
+      </td>
+      <td><i id="1PM" class="material-icons md-48">delete</i></td>
+    </tr>
+    <tr>
+      <td id="timer">2PM</td>
+      <td>
+        <ul>
+          <li id="2">
+          </li>
+        </ul>
+      </td>
+      <td><i id="2PM" class="material-icons md-48">delete</i></td>
+    </tr>
+    <tr>
+      <td id="timer">3PM</td>
+      <td>
+        <ul>
+          <li id="3">
+          </li>
+        </ul>
+      </td>
+      <td><i id="3PM" class="material-icons md-48">delete</i></td>
+    </tr>
+    <tr>
+      <td id="timer">4PM</td>
+      <td>
+        <ul>
+          <li id="4">
+          </li>
+        </ul>
+      </td>
+      <td><i id="4PM" class="material-icons md-48">delete</i></td>
+    </tr>
+    <tr>
+      <td id="timer">5PM</td>
+      <td>
+        <ul>
+          <li id="5">
+          </li>
+        </ul>
+      </td>
+      <td><a id="5PM" class="material-icons md-48">delete</a></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+
   </div>
   <script src="script.js"></script>
 </body>

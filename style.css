@@ -3,6 +3,8 @@ body{
   color: whitesmoke;
 }
 .heading{
+  color: black;
+  margin-top: 10px;
   margin-left: 15px;
   margin-right: 15px;
   border-top-right-radius: 15px;
@@ -11,7 +13,12 @@ body{
   background: rgb(173,153,173);
   text-align: center;
 }
+h2{
+  
+  text-align: center;
+}
 h3{
+  font-size: 1.25rem;
   text-align: center;
 }
 table {
@@ -38,11 +45,12 @@ table {
     height: 100%;
   }
   .addBTN {
+    margin-top: 10px;
     background: rgb(173,153,173);
     margin-right: 15px;
     margin-left: 15px;
-    border-bottom-right-radius: 15px;
-    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
     width: 100%;
   }
   input {
@@ -54,4 +62,14 @@ table {
 }
 i {
   text-align: center;
+}
+#save{
+  text-align: center;
+}
+#newTime{
+  text-align: center;
+  font-size: 16px;
+}
+option{
+  font-size: 16px;
 }

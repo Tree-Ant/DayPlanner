@@ -21,52 +21,52 @@ var getFour = JSON.parse(localStorage.getItem("4PM"));
 var getFive = JSON.parse(localStorage.getItem("5PM"));
 
 starter();
-function starter(){
-if (getNine !== null ) {
-    oldNine();  
-}
-if (getTen !== null ) {
-    oldTen();  
-}
-if (getEleven !== null ) {
-    oldEleven();  
-}
-if (getTwelve !== null ) {
-    oldTwelve();  
-}
-if (getOne !== null ) {
-    oldOne();  
-}
-if (getTwo !== null ) {
-    oldTwo();  
-}
-if (getThree !== null ) {
-    oldThree();  
-}
-if (getFour !== null ) {
-    oldFour();  
-}
-if (getFive !== null ) {
-    oldFive();  
-}
-}
-
-
-function oldNine() {    
-    var getNine = JSON.parse(localStorage.getItem("9AM"));    
-        for (var j = 0; j <= getNine.length; j++) {
-            nine.push(getNine[j]);
-        }
-        for (var k = 0; k < nine.length; k++) {
-            $("#9").append($("<li>")).append(nine[k]);
-        };
+function starter() {
+    if (getNine !== null) {
+        oldNine();
     }
-    
-    $(".table2").hide();
+    if (getTen !== null) {
+        oldTen();
+    }
+    if (getEleven !== null) {
+        oldEleven();
+    }
+    if (getTwelve !== null) {
+        oldTwelve();
+    }
+    if (getOne !== null) {
+        oldOne();
+    }
+    if (getTwo !== null) {
+        oldTwo();
+    }
+    if (getThree !== null) {
+        oldThree();
+    }
+    if (getFour !== null) {
+        oldFour();
+    }
+    if (getFive !== null) {
+        oldFive();
+    }
+}
+
+
+function oldNine() {
+    var getNine = JSON.parse(localStorage.getItem("9AM"));
+    for (var j = 0; j <= getNine.length; j++) {
+        nine.push(getNine[j]);
+    }
+    for (var k = 0; k < nine.length; k++) {
+        $("#9").append($("<li>")).append(nine[k]);
+    };
+}
+
+$(".table2").hide();
 
 function oldTen() {
     //10
-    
+
     var getTen = JSON.parse(localStorage.getItem("10AM"));
     if (getTen.length > 0) {
         for (var j = 0; j < getTen.length; j++) {
@@ -79,7 +79,7 @@ function oldTen() {
 }
 function oldEleven() {
     //11
-    
+
     var getEleven = JSON.parse(localStorage.getItem("11AM"));
     if (getEleven.length > 0) {
         for (var j = 0; j < getEleven.length; j++) {
@@ -92,9 +92,9 @@ function oldEleven() {
 }
 function oldTwelve() {
     //12
-    
+
     var getTwelve = JSON.parse(localStorage.getItem("12PM"));
-    console.log(getTwelve);
+
     if (getTwelve.length > 0) {
         for (var j = 0; j < getTwelve.length; j++) {
             twelve.push(getTwelve[j]);
@@ -106,7 +106,7 @@ function oldTwelve() {
 }
 function oldOne() {
     //1
-    
+
     var getOne = JSON.parse(localStorage.getItem("1PM"));
     if (getOne.length > 0) {
         for (var j = 0; j < getOne.length; j++) {
@@ -119,7 +119,7 @@ function oldOne() {
 }
 function oldTwo() {
     //2
-    
+
     var getTwo = JSON.parse(localStorage.getItem("2PM"));
     if (getTwo.length > 0) {
         for (var j = 0; j < getTwo.length; j++) {
@@ -132,7 +132,7 @@ function oldTwo() {
 }
 function oldThree() {
     //3
-    
+
     var getThree = JSON.parse(localStorage.getItem("3PM"));
     if (getThree.length > 0) {
         for (var j = 0; j < getThree.length; j++) {
@@ -145,7 +145,7 @@ function oldThree() {
 }
 function oldFour() {
     //4
-    
+
     var getFour = JSON.parse(localStorage.getItem("4PM"));
     if (getFour.length > 0) {
         for (var j = 0; j < getFour.length; j++) {
@@ -158,7 +158,7 @@ function oldFour() {
 }
 function oldFive() {
     //5
-    
+
     var getFive = JSON.parse(localStorage.getItem("5PM"));
     if (getFive.length > 0) {
         for (var j = 0; j < getFive.length; j++) {
@@ -251,6 +251,37 @@ $("#save").on("click", function () {
 
 $(".addBTN").on("click", function () {
     $(".table2").toggle(1000);
-
-
 })
+
+$("#9AM").on("click", function () {
+    localStorage.removeItem("9AM");
+    location.reload();})
+$("#10AM").on("click", function () {
+    localStorage.removeItem("10AM");
+    location.reload();})
+$("#11AM").on("click", function () {
+    localStorage.removeItem("11AM");
+    location.reload();
+})
+$("#12PM").on("click", function () {
+    localStorage.removeItem("12PM");
+    location.reload();})
+$("#1PM").on("click", function () {
+    localStorage.removeItem("1PM");
+    location.reload();})
+$("#2PM").on("click", function () {
+    localStorage.removeItem("2PM");
+    location.reload();})
+$("#3PM").on("click", function () {
+    localStorage.removeItem("3PM");
+    location.reload();})
+$("#4PM").on("click", function () {
+    localStorage.removeItem("4PM");
+    location.reload();})
+$("#5PM").on("click", function () {
+    localStorage.removeItem("5PM");
+    location.reload();})
+
+$("#Date").text(moment().format("MMM Do YY"));
+
+console.log(moment().format("MMM Do YY"));
